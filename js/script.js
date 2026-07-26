@@ -27,3 +27,26 @@ if (formOrcamento) {
         window.open(url, "_blank", "noopener,noreferrer");
     });
 }
+
+const navToggle = document.querySelector("#nav-toggle");
+const navMenu = document.querySelector("#nav-menu");
+
+if (navToggle && navMenu) {
+    const closeMenu = () => {
+        navMenu.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+    };
+
+    navToggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) closeMenu();
+    });
+}
