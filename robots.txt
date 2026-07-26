@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://localemalta.com.br/sitemap.xml

@@ -1,0 +1,68 @@
+:root{--primary:#0f2f7f;--primary-strong:#061b49;--primary-bright:#2563eb;--secondary:#25D366;--secondary-strong:#16a34a;--bg:#050914;--surface:#0b1220;--text:#f8fafc;--muted:#b7c3d6;--border:rgba(255,255,255,.14);--card:#0d1728;--shadow:0 24px 70px rgba(0,0,0,.38);--glow:0 0 0 1px rgba(37,211,102,.18),0 18px 46px rgba(37,211,102,.24)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:hidden}body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:radial-gradient(circle at top left,rgba(37,99,235,.24),transparent 36%),linear-gradient(180deg,#050914 0%,#071126 44%,#050914 100%);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,28px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:15px 30px;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer;border:0;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;color:#fff;text-align:center;line-height:1.2;white-space:normal}
+.btn-primary{background:linear-gradient(135deg,var(--secondary),var(--secondary-strong));color:#03130a;box-shadow:var(--glow);border:1px solid rgba(255,255,255,.18)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,255,255,.18),0 22px 60px rgba(37,211,102,.36)}
+.btn-outline{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.26);box-shadow:0 12px 32px rgba(0,0,0,.18)}
+.btn-outline:hover{border-color:rgba(37,211,102,.62);background:rgba(37,211,102,.08);transform:translateY(-2px)}
+.card{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(17,31,54,.96),rgba(9,18,33,.98));border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:0 18px 44px rgba(0,0,0,.28);transition:transform .25s,border-color .25s,box-shadow .25s}
+.card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--primary-bright),var(--secondary));opacity:.9}
+.card:hover{transform:translateY(-5px);border-color:rgba(37,211,102,.38);box-shadow:0 28px 70px rgba(0,0,0,.38)}
+h1,h2,h3{font-family:'Inter',sans-serif;font-weight:800;letter-spacing:0;line-height:1.08;color:#fff;text-wrap:balance}
+h1{font-size:clamp(34px,7vw,76px);max-width:12ch}h2{font-size:clamp(28px,4vw,46px)}h3{font-size:clamp(20px,2.2vw,24px)}
+section{padding:clamp(68px,9vw,108px) 0}section[id]{scroll-margin-top:96px}
+.muted{color:var(--muted)}.tag{display:inline-block;padding:7px 15px;border-radius:999px;background:rgba(37,99,235,.18);border:1px solid rgba(37,211,102,.28);font-size:12px;font-weight:800;color:#dbeafe;margin-bottom:18px;text-transform:uppercase;letter-spacing:.06em}
+.fade-up{opacity:1;transform:none}
+header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(16px);background:rgba(5,9,20,.86);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 12px 34px rgba(0,0,0,.24)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+.logo{font-weight:800;font-size:20px;color:#fff;line-height:1.15;max-width:260px}
+.nav ul{display:flex;gap:28px;list-style:none;align-items:center}.nav ul a{font-size:14px;font-weight:700;color:var(--muted);transition:color .2s}.nav ul a:hover{color:#fff}
+.hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:center;padding-top:82px;background:linear-gradient(90deg,rgba(5,9,20,.86) 0%,rgba(5,9,20,.68) 35%,rgba(5,9,20,.2) 58%,rgba(5,9,20,.02) 100%),linear-gradient(180deg,rgba(5,9,20,.02),rgba(5,9,20,.08) 62%,rgba(5,9,20,.56)),url('img/pai-filho-montador.png') 68% 42%/cover no-repeat;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,204,21,.11) 1px,transparent 1px),linear-gradient(180deg,rgba(250,204,21,.06) 1px,transparent 1px);background-size:72px 72px;opacity:.16;mask-image:linear-gradient(90deg,#000,transparent 58%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:28%;background:linear-gradient(180deg,transparent,var(--bg));pointer-events:none}
+.hero .container{position:relative;z-index:1;display:block}
+.hero-note{position:absolute;top:22%;left:37%;width:220px;max-width:300px;color:#fff;font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(21px,2vw,29px);line-height:1.35;text-align:left;text-shadow:0 8px 24px rgba(0,0,0,.46);transform:rotate(-7deg);transform-origin:left center;margin:0;z-index:6}
+.hero-copy{width:min(100%,620px);min-width:0}
+.hero .tag{width:fit-content;max-width:100%;margin-bottom:10px;border-color:rgba(250,204,21,.46);background:rgba(5,9,20,.5);color:#fde68a;box-shadow:0 12px 34px rgba(0,0,0,.18)}
+.hero h1{font-size:clamp(44px,6.4vw,80px);line-height:.94;max-width:680px;margin-bottom:14px;color:#fff;background:none;-webkit-text-fill-color:initial;text-shadow:0 18px 52px rgba(0,0,0,.5)}
+.hero h1 span{display:block;color:#facc15}
+.hero-kicker{display:inline-flex;align-items:center;width:fit-content;max-width:100%;margin-bottom:14px;padding:8px 14px;border-radius:999px;background:rgba(5,9,20,.5);border:1px solid rgba(250,204,21,.42);color:#fde68a;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 12px 34px rgba(0,0,0,.16)}
+.hero p{font-size:clamp(17px,1.9vw,20px);color:#edf5ff;max-width:600px;margin-bottom:14px;text-shadow:0 10px 30px rgba(0,0,0,.48)}
+.hero-line strong{color:#facc15}
+.hero-residential{position:relative;display:inline-flex;align-items:center;gap:8px;width:fit-content;max-width:100%;margin:0 0 14px;padding:9px 13px;border-radius:12px;background:rgba(5,9,20,.58);border:1px solid rgba(250,204,21,.34);color:#fff;font-weight:800}
+.hero-residential::before{content:"";width:17px;height:14px;display:inline-block;border:2px solid #facc15;border-top:0;position:relative}
+.hero-residential::after{content:"";width:13px;height:13px;border-left:2px solid #facc15;border-top:2px solid #facc15;position:absolute;left:17px;top:8px;transform:rotate(45deg)}
+.hero-trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:560px;margin:0 0 16px}
+.hero-trust span{display:flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:8px 10px;border-radius:12px;background:rgba(5,9,20,.58);border:1px solid rgba(250,204,21,.3);color:#fff;font-size:14px;font-weight:800;box-shadow:0 12px 34px rgba(0,0,0,.15)}
+.hero-trust span::before{content:"";width:9px;height:9px;border-radius:50%;background:#facc15;box-shadow:0 0 0 4px rgba(250,204,21,.13)}
+.hero-whatsapp{display:block;max-width:430px;margin-bottom:12px;padding:16px;border-radius:18px;background:linear-gradient(135deg,#25D366,#16a34a);color:#041008;border:1px solid rgba(255,255,255,.32);box-shadow:0 22px 58px rgba(37,211,102,.34);font-weight:800}
+.hero-whatsapp:hover{transform:translateY(-2px);box-shadow:0 28px 70px rgba(37,211,102,.42)}
+.hero-whatsapp span{display:block;font-size:15px}.hero-whatsapp strong{display:block;margin-top:2px;font-size:clamp(24px,3vw,34px);line-height:1}
+.hero-cities{font-size:15px!important;color:#f8fafc!important;margin-bottom:0!important;font-weight:800}
+.hero-cities::before{content:"";display:inline-block;width:10px;height:10px;margin-right:8px;border-radius:50% 50% 50% 0;border:2px solid #facc15;transform:rotate(-45deg);vertical-align:middle}
+.hero-media,.hero-image{display:none}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
+.section-head{text-align:center;max-width:720px;margin:0 auto 58px}
+.section-head p{font-size:17px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.portfolio-item{display:block;overflow:hidden;background:linear-gradient(180deg,rgba(17,31,54,.96),rgba(9,18,33,.98));border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.28);transition:transform .25s,border-color .25s,box-shadow .25s}
+.portfolio-item:hover{transform:translateY(-5px);border-color:rgba(37,211,102,.38);box-shadow:0 28px 70px rgba(0,0,0,.38)}
+.portfolio-item img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#071126}
+.portfolio-item h3{padding:16px 18px 18px;font-size:18px;line-height:1.16}
+.icon-circle{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--primary-bright),var(--secondary));display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 16px 36px rgba(37,99,235,.28)}
+.team-card{text-align:center}.team-card img{width:140px;height:140px;border-radius:50%;margin:0 auto 16px;object-fit:cover;border:3px solid var(--border)}
+form{display:grid;gap:16px;max-width:580px;margin:0 auto}input,textarea,select{width:100%;padding:15px 16px;background:#071126;border:1px solid rgba(255,255,255,.16);border-radius:12px;color:#fff;font-size:16px;font-family:inherit;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}input:focus,textarea:focus{outline:none;border-color:var(--secondary);box-shadow:0 0 0 4px rgba(37,211,102,.14)}
+footer{background:#030712;padding:50px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:14px}
+.wa{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--secondary),var(--secondary-strong));display:flex;align-items:center;justify-content:center;box-shadow:var(--glow);z-index:60;border:1px solid rgba(255,255,255,.22)}
+.wa svg{width:30px;height:30px;display:block;fill:#fff}
+@media(max-width:991px){.hero-note{position:static;width:100%;max-width:360px;margin-top:16px}}
+@media(max-width:1024px){.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:768px){section{padding:64px 0}section[id]{scroll-margin-top:86px}.nav{align-items:flex-start;gap:12px}.nav ul{display:none}.logo{font-size:18px;max-width:170px}.nav .btn{min-height:46px;padding:12px 15px;font-size:13px;border-radius:10px}.hero{min-height:auto;padding:118px 0 66px;align-items:flex-start;background:linear-gradient(180deg,rgba(5,9,20,.84),rgba(5,9,20,.6) 48%,rgba(5,9,20,.88)),url('img/pai-filho-montador.png') 66% center/cover no-repeat}.hero::before{opacity:.1}.hero::after{height:22%}.hero-note{transform:none}.hero-copy{width:100%}.hero h1{font-size:clamp(38px,11vw,56px);max-width:100%;margin-bottom:10px}.hero p{font-size:16px;margin-bottom:14px}.hero-trust{grid-template-columns:1fr;gap:8px;margin-bottom:14px}.hero-whatsapp{max-width:none;padding:15px}.cta-row{display:grid;grid-template-columns:1fr;gap:12px}.cta-row .btn{width:100%;min-height:54px}.grid-3{grid-template-columns:1fr;gap:18px}.card{padding:24px}.section-head{margin-bottom:38px}.wa{width:56px;height:56px;right:16px;bottom:16px}}
+@media(max-width:640px){.portfolio-grid{grid-template-columns:1fr}}
+@media(max-width:414px){.container{padding:0 16px}.hero{padding-top:120px;background-position:64% center}.hero-kicker{font-size:12px;white-space:normal}.btn{width:100%;min-height:54px;padding:14px 18px;font-size:15px}.nav .btn{width:auto;max-width:148px;min-height:44px;padding:10px 12px;font-size:12px}.logo{max-width:150px;font-size:17px}h2{font-size:30px}h3{font-size:21px}.card{padding:22px}.icon-circle{width:50px;height:50px}.section-head p{font-size:16px}}
+@media(max-width:360px){.container{padding:0 14px}.nav{gap:8px}.logo{max-width:132px;font-size:16px}.nav .btn{max-width:136px;font-size:12px;padding:10px}.hero{padding-top:116px}.hero h1{font-size:36px}.hero p{font-size:16px}.card{padding:20px}.wa{width:56px;height:56px}}
+@media(min-width:769px){#servicos{scroll-margin-top:72px;padding:40px 0 58px}#servicos .section-head{margin-bottom:24px}#servicos .tag{margin-bottom:8px}#servicos .grid-3{gap:16px}#servicos .card{padding:20px;display:flex;flex-direction:column}#servicos .icon-circle{margin-bottom:14px}#servicos .card p{margin-top:8px!important}#contato{scroll-margin-top:72px;padding:48px 0 64px}#contato .section-head{margin-bottom:30px}#contato .tag{margin-bottom:10px}}
+@media(max-width:768px){#servicos{padding:64px 0}#servicos .section-head{margin-bottom:38px}#servicos .grid-3{gap:18px}}
+@media(min-width:1200px){.hero-copy{margin-left:calc(4vw - ((100vw - 1200px) / 2 + 28px));padding-left:0}.hero .tag{margin-top:18px}}
