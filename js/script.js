@@ -12,7 +12,7 @@ if (formOrcamento) {
         const mensagem = String(dados.get("msg") || "").trim();
 
         const texto = [
-            "Olá! Vi o site da Local em Alta e quero saber mais sobre criação de site e Google Business.",
+            "Olá! Vi o site da Local em Alta e quero saber mais sobre um projeto de site para a minha empresa.",
             `Meu nome é ${nome}.`,
             `Meu WhatsApp é ${telefone}.`,
             email ? `Meu e-mail é ${email}.` : "",
