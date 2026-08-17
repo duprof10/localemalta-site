@@ -26,9 +26,13 @@
 </head>
 <body>
 
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
 <header><div class="container nav">
 <div class="logo">Local em Alta</div>
+<nav aria-label="Principal">
 <ul id="nav-menu"><li><a href="#inicio">Início</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#atendimento">Área de Atendimento</a></li><li><a href="#contato">Contato</a></li></ul>
+</nav>
 <div class="nav-actions">
 <a href="https://wa.me/5511973937939?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Local%20em%20Alta%20e%20quero%20saber%20mais%20sobre%20um%20projeto%20de%20site%20para%20a%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Peça seu orçamento</a>
 <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
@@ -38,6 +42,8 @@
 </button>
 </div>
 </div></header>
+
+<main id="conteudo" tabindex="-1">
 
 <section class="hero" id="inicio"><div class="container">
 <div class="hero-copy">
@@ -156,11 +162,30 @@
             </p>
         </div>
 
-        <form id="orcamento-form">
-            <input name="nome" placeholder="Seu nome" required>
-            <input name="telefone" placeholder="WhatsApp" required>
-            <input name="email" type="email" placeholder="E-mail">
-            <textarea name="msg" rows="4" placeholder="Como podemos ajudar?"></textarea>
+        <form id="orcamento-form" novalidate>
+            <p class="form-hint">Campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
+
+            <div class="field">
+                <label for="nome">Nome <span aria-hidden="true">*</span></label>
+                <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Ex.: João da Silva" required>
+            </div>
+
+            <div class="field">
+                <label for="telefone">WhatsApp <span aria-hidden="true">*</span></label>
+                <input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="Ex.: (11) 99999-9999" required>
+            </div>
+
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="Ex.: contato@suaempresa.com.br">
+            </div>
+
+            <div class="field">
+                <label for="msg">Como podemos ajudar?</label>
+                <textarea id="msg" name="msg" rows="4" placeholder="Conte o que sua empresa faz e o que precisa resolver."></textarea>
+            </div>
+
+            <p id="form-erro" class="form-erro" role="alert" hidden></p>
 
             <button type="submit" class="btn btn-primary" style="justify-content:center">
                 Falar no WhatsApp
@@ -168,6 +193,8 @@
         </form>
     </div>
 </section>
+
+</main>
 
 <footer>
     <div class="container">
@@ -187,7 +214,6 @@
             © 2026 Local em Alta. Todos os direitos reservados.
         </p>
     </div>
-</footer>
 
 <a
     href="https://wa.me/5511973937939?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Local%20em%20Alta%20e%20quero%20saber%20mais%20sobre%20um%20projeto%20de%20site%20para%20a%20minha%20empresa."
@@ -200,6 +226,7 @@
         <path d="M16.02 3.2A12.72 12.72 0 0 0 5.23 22.65L3.8 28.8l6.3-1.48A12.72 12.72 0 1 0 16.02 3.2Zm0 23.28c-1.94 0-3.74-.53-5.3-1.45l-.38-.22-3.74.88.84-3.66-.25-.38a10.56 10.56 0 1 1 8.83 4.83Zm5.8-7.9c-.32-.16-1.88-.93-2.17-1.04-.29-.1-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.71-1.7-.97-2.33-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.15 3.08 1.31 3.29.16.21 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.88-.77 2.15-1.51.26-.74.26-1.38.18-1.51-.08-.13-.29-.21-.61-.37Z"/>
     </svg>
 </a>
+</footer>
 
 <script src="js/script.js"></script>
 
