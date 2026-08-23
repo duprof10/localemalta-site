@@ -9,6 +9,7 @@ Responda sempre em português do Brasil, incluindo relatórios, resumos, mensage
 - Pedido claro e escopo definido: analisar e executar em um único fluxo, sem pausa intermediária.
 - Interromper para perguntar somente quando houver ambiguidade real, risco destrutivo/irreversível, ou decisão estratégica (preço, serviço, posicionamento, regra comercial) que não possa ser inferida com segurança.
 - Se o usuário autorizar um lote explícito (ex.: "alterar, testar, commit e push"), executar o lote inteiro sem pedir autorização a cada subetapa.
+- Em tarefas visuais ou funcionais do site, executar todas as alterações do lote solicitado e os testes necessários sem interrupções. Depois disponibilizar a prévia para o usuário avaliar visualmente. Parar antes de commit/push, salvo quando o próprio pedido já autorizar explicitamente publicação.
 
 ## Regras comerciais permanentes
 
