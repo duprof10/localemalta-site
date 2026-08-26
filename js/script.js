@@ -96,3 +96,36 @@ if (navToggle && navMenu) {
         if (window.innerWidth > 768) closeMenu();
     });
 }
+
+(function () {
+    const ajustarAssinatura = () => {
+        document.querySelectorAll(".lock").forEach((lock) => {
+            const img = lock.querySelector("img");
+            const nome = lock.querySelector(".nome");
+            const fio = lock.querySelector(".fio");
+            if (!img || !nome || !fio) return;
+
+            const alvo = img.getBoundingClientRect().width;
+            if (!alvo) return;
+
+            nome.style.fontSize = "100px";
+            const atual = nome.getBoundingClientRect().width;
+            if (!atual) return;
+
+            nome.style.fontSize = ((100 * alvo) / atual).toFixed(2) + "px";
+            fio.style.width = Math.round(nome.getBoundingClientRect().width) + "px";
+        });
+    };
+
+    const agendar = () => requestAnimationFrame(ajustarAssinatura);
+
+    agendar();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(agendar);
+    window.addEventListener("load", agendar);
+
+    let t;
+    window.addEventListener("resize", () => {
+        clearTimeout(t);
+        t = setTimeout(agendar, 120);
+    });
+})();
