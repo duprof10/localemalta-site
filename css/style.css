@@ -163,6 +163,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 @media(max-width:640px){
   .oferta{font-size:10.5px;letter-spacing:.10em;line-height:2.25;padding-bottom:18px}
   .oferta i{margin:0 .2em}
+  .frente-cab{gap:8px 14px}
+  .frente-cab h3{flex:1 1 100%}
+  .frente-cab .traco{flex:0 0 24px;min-width:24px;align-self:center}
+  .frente-cab .kicker{flex:1 1 auto;min-width:0;white-space:normal}
 }
 .hero h1{margin-bottom:20px;color:var(--cream)}
 .hero h1 .pt{color:var(--gold)}
@@ -311,7 +315,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   content:"";position:absolute;bottom:0;left:0;right:0;height:1px;
   background:linear-gradient(90deg,rgba(212,175,55,.28) 0%,rgba(250,247,240,.10) 22%,transparent 92%);
 }
-.frente-cab{display:flex;align-items:baseline;gap:18px;margin-bottom:clamp(18px,2vw,26px)}
+.frente-cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;margin-bottom:clamp(18px,2vw,26px)}
 .frente-cab h3{flex:none;margin:0}
 .traco{flex:1;height:1px;min-width:16px;background:rgba(212,175,55,.34)}
 .kicker{
